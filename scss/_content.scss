@@ -1,0 +1,50 @@
+#content{
+    min-width: $content-width;
+    min-height: $content-height;
+
+    max-width: $content-width;
+    max-height: $content-height;
+
+    background-color: $white;
+    .page-title{
+        height: $page-title-height;
+        width: $page-title-widht;
+        display: flex;
+        align-items: center;
+        margin-left: $page-title-margin;
+
+        span{
+            font-size: $page-title-font-size;
+            font-weight: $page-title-font-weight;
+            color: $black-70;
+        }
+    }
+    .page-content{
+        height: $page-content-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        margin: $page-content-margin;
+        .landing-image{
+            user-select: none;
+        }
+        .landing-title{
+           margin-top: 10px;
+           font-size: 20px;
+           font-weight: 400;
+           color: $black-70;
+        }
+        .landing-subtitle{
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: 200;
+            color: $black-70;
+        }
+        .landing-btn{
+            margin-top: 25px;
+            user-select: none;
+        }
+    }
+}

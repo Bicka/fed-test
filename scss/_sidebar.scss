@@ -1,0 +1,57 @@
+#sidebar{
+    background-color: $dark;
+    width: $sidebar-width;
+    height: $sidebar-height;
+    //position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+
+    .sidebar-logo{
+        width: 21.9px;
+        height: 25.48px;
+        margin-top: 16.93px;
+        margin-left: 34.18px;
+        user-select: none;
+    }
+
+    .sidebar-button{
+        position: absolute;
+        margin-left: 82px;
+        margin-top: 9px;
+    }
+
+    .sidebar-list{
+        margin-top: 54px;
+        .sidebar-item{
+            width: $sidebar-width;
+            height: 62px;
+            padding-top: 10px;
+            
+            .sidebar-list-button
+            {
+                text-align: center;
+                display: grid;
+
+                cursor: pointer;
+
+                img{
+                    height: 16px;
+                    width: 16px;
+                    padding: 8px;
+                    user-select: none;
+                    margin: auto;
+                }
+                span{
+                    user-select: none;
+                    color: $light-70;
+                    font-size: 12px;
+                    width: $sidebar-width;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    
+}
+

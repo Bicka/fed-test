@@ -1,0 +1,43 @@
+input{
+    font-family: 'Montserrat', sans-serif;
+    height: $input-height;
+    width: $input-width;
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+    border: $gray-input solid;
+    &:hover{
+        border-color: $black;
+    }
+    &:focus{
+        border-color: $primary-color-focus;
+    }
+    &:active{
+        border-color: $primary-color-active;
+    }
+    &:disabled{
+        font-style: italic;
+        background-color: $white;
+    }
+    
+    &[type=checkbox],&[type=radio]{
+        height: 18px!important;
+        width: 18px!important;
+    }
+    &[type=checkbox]:checked,&[type=radio]:checked{
+        &:hover{
+            background-color: $primary-color-hover;
+        }
+        &:focus{
+            background-color: $primary-color-focus;
+        }
+        &:active{
+            background-color: $primary-color-active;
+        }
+        &:disabled{
+            font-style: italic;
+            background-color: $white;
+        }
+    }
+}

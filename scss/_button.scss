@@ -1,0 +1,38 @@
+button{
+    border-radius: 16px;
+    height: 32px;
+    padding: 7px 16px;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary{
+    color: $white;
+    background-color: $primary-color;
+    &:hover{
+        background-color: $primary-color-hover;
+    }
+    &:focus{
+        background-color: $primary-color-focus;
+    }
+    &:active{
+        background-color: $primary-color-active;
+    }
+    &:disabled{
+        font-style: italic;
+        background-color: $black-12;
+    }
+}
+.btn-secondary{
+    color: $black;
+    background-color: $white;
+    border: $black solid;
+    &:hover{
+        background-color: $black-12;
+    }
+    &:disabled{
+        font-style: italic;
+        background-color: $black-12;
+    }
+}

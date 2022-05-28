@@ -1,0 +1,77 @@
+#header{
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: $header-height;
+    width: auto;
+    height: $header-height;
+    background-color: $white;
+
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+
+    .header-content{
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        float: right;
+        height: $header-content-height;
+        margin-right: $header-content-margin;
+        .user-options{
+            display: block;
+            margin-right: $user-options-margin-right;
+            text-align: center;
+            align-items: center;
+            align-items: center;
+            justify-content: center;
+            
+            height: $user-options-height;
+            width: $user-options-width;
+            hr{
+                display: block;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+                border-style: inset;
+                border-width: 1px;
+                border-color: $black-12;
+            }
+        }
+        .options-group{
+           
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           .option-item{
+                img{
+                    height: 16px;
+                    width: 16px;
+                    padding: 8px;
+                    user-select: none;
+                    margin: auto;
+                }
+                &.dot::before{
+                    content: attr(data-before);
+                    border: 1px solid $orange !important;
+                    background-color: $orange !important;
+                    width: 16px;
+                    height: 16px;
+                    color: #fff;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 17px;
+                    font-size: 9px;
+                    
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                }
+           }
+            
+        }
+    }
+}

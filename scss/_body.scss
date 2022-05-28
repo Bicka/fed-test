@@ -1,0 +1,16 @@
+body{
+    margin:0px!important;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: $sidebar-width $main-content-width;
+    min-height: 100vh;
+    background-color: $white;
+
+    .main-page{
+        display: grid;
+        grid-template-rows: $header-height $content-height;
+        min-width: $main-content-width;
+        min-height: $main-content-height;
+    }
+}
+

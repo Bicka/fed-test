@@ -1,0 +1,9 @@
+<svg id="menu_button_expand_copy" data-name="menu/button/expand copy" xmlns="http://www.w3.org/2000/svg" width="24" height="43" viewBox="0 0 24 43">
+  <g id="Group" transform="translate(4)">
+    <path id="Path" d="M0,42a3.6,3.6,0,0,0,4.982,0L13.4,34.339A5.218,5.218,0,0,0,15,30.487V12.513a5.218,5.218,0,0,0-1.6-3.852L4.982,1A3.6,3.6,0,0,0,0,1Z" fill="#181f2c"/>
+  </g>
+  <g id="icon_expand_arrow" data-name="icon expand arrow" transform="translate(0 9)">
+    <path id="Path_Copy" data-name="Path Copy" d="M0,0H24V24H0Z" fill="none"/>
+    <path id="Path-2" data-name="Path" d="M4.3,5.5.22,9.685a.785.785,0,0,0,0,1.089.737.737,0,0,0,1.062,0l4.61-4.73a.784.784,0,0,0,0-1.089L1.282.226A.737.737,0,0,0,.22.226a.785.785,0,0,0,0,1.089Z" transform="translate(8 7)" fill="#fff"/>
+  </g>
+</svg>

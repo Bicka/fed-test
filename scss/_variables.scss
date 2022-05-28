@@ -1,0 +1,75 @@
+$white:   #fff;
+$black:   #000;
+
+$dark:    #181F2C;
+
+$black-12:  rgb(0 0 0 / 12%);
+$black-70: rgb(0 0 0 / 70%);
+
+$light-70: rgb(255 255 255 / 70%);
+
+$gray-input: #eaeaea;
+
+$blue:    #027EE6;
+$orange:  #FF883F;
+$green:   #268E6C;
+
+$indigo:  #5856d6;
+$purple:  #af52de;
+$pink:    #ff2d55;
+$red:     #ff3a30;
+$yellow:  #ffcc00;
+$teal:    #5ac7fa;
+
+
+$primary-color:          #027EE6;
+$primary-color-hover:    #008df4;
+$primary-color-focus:    #065cc1;
+$primary-color-active:   #6abcf8;
+$primary-color-disabled: #cecece;
+
+//Global
+$global-width: 100vw;
+$global-height: 100vh;
+
+//Inputs
+$input-width: 240px!important;
+$input-height: 32px!important;
+
+
+//Sidebar
+$sidebar-width: 90px;
+$sidebar-height: 100%;
+
+//Header
+$header-height: 56px;
+$header-weight: calc($global-width - $sidebar-width);
+
+$header-content-height: 32px;
+$header-content-margin: 20px;
+
+$user-options-width: 186px;
+$user-options-height: 32px;
+$user-options-margin-right: 40px;
+
+//MainContent
+$main-content-width: $header-weight;
+$main-content-height: $global-height;
+
+//Content
+$content-width: $header-weight;
+$content-height: calc($global-height - $header-height);
+
+//Page-title
+$page-title-margin: 25px;
+$page-title-height: 56px;
+$page-title-widht: calc($main-content-width - $page-title-margin);
+$page-title-font-size: 20px;
+$page-title-font-weight: 400;
+
+//Page-Content
+$page-content-margin: 25px;
+$page-content-height: calc($content-height - $page-title-height - $page-content-margin*2);
+$page-content-widht: calc($main-content-width - $page-content-margin*2);
+$page-content-font-size: 20px;
+$page-content-font-weight: 400;
