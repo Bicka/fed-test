@@ -1,0 +1,50 @@
+.window-div{
+    display: grid;
+    grid-template-rows: $window-header-height $window-body-height $window-footer-height;
+    height: $window-height;
+    width: $window-width;
+    z-index: 20;
+    background-color: $white;
+    position: absolute;
+    top: $header-height;
+    left: $sidebar-width;
+
+    .window-header{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-bottom: inset 1px;
+        border-color: $black;
+        .window-title{
+            float: left;
+            margin-right: auto;
+            margin-left: $window-left-margin;
+            span{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .window-options{
+            float: right;
+            margin-left: auto;
+            margin-right: 30px;
+            button{
+                background-color: transparent;
+            }
+        }
+    }
+    .window-body{
+        margin-left: $window-left-margin;
+        overflow: hidden;
+        overflow-y: auto;
+        min-height: $window-body-height;
+    }
+    .window-footer{
+        margin-left: $window-left-margin;
+        display: flex;
+        align-items: center;
+        .btn-primary{
+            margin-right: 20px;
+        }
+    }
+}

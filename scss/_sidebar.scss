@@ -2,11 +2,9 @@
     background-color: $dark;
     width: $sidebar-width;
     height: $sidebar-height;
-    //position: fixed;
-    top: 0;
-    left: 0;
     font-family: 'Roboto', sans-serif;
-
+    overflow: hidden;
+    
     .sidebar-logo{
         width: 21.9px;
         height: 25.48px;
@@ -22,6 +20,9 @@
     }
 
     .sidebar-list{
+        display:list-item;
+        overflow: hidden;
+        overflow-y: scroll;
         margin-top: 54px;
         .sidebar-item{
             width: $sidebar-width;

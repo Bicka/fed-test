@@ -5,10 +5,12 @@ $dark:    #181F2C;
 
 $black-12:  rgb(0 0 0 / 12%);
 $black-70: rgb(0 0 0 / 70%);
+$black-30: rgb(0 0 0 / 30%);
 
 $light-70: rgb(255 255 255 / 70%);
 
 $gray-input: #eaeaea;
+$scrollbar-color :#D5D5D5;
 
 $blue:    #027EE6;
 $orange:  #FF883F;
@@ -35,6 +37,8 @@ $global-height: 100vh;
 //Inputs
 $input-width: 240px!important;
 $input-height: 32px!important;
+$input-select-width: 266px!important;
+$input-select-height: 36px!important;
 
 
 //Sidebar
@@ -73,3 +77,25 @@ $page-content-height: calc($content-height - $page-title-height - $page-content-
 $page-content-widht: calc($main-content-width - $page-content-margin*2);
 $page-content-font-size: 20px;
 $page-content-font-weight: 400;
+
+
+//Window
+$window-height: 80%;
+$window-width: calc($global-width - $sidebar-width);
+
+
+$window-header-height: 68px;
+$window-footer-height: 80px;
+$window-body-height: calc(100% - $window-header-height - $window-footer-height);
+
+$window-left-margin: 50px;
+
+//Form
+$form-row-grid-label: 250px;
+$form-row-chapter-title-height: 75px;
+$form-row-chapter-title-margin-top: 10px;
+$form-row-chapter-title-margin-bottom: 0px;
+
+//Toast
+$toast-height: 50px;
+$toast-width: 340px;

@@ -1,16 +1,31 @@
 body{
     margin:0px!important;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    .block-clicks{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        background-color: $black-30;
+      }
+}
+.app-div{
+    margin:0px!important;
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: $sidebar-width $main-content-width;
     min-height: 100vh;
     background-color: $white;
 
-    .main-page{
+    .main-content{
         display: grid;
         grid-template-rows: $header-height $content-height;
         min-width: $main-content-width;
         min-height: $main-content-height;
     }
 }
+
 

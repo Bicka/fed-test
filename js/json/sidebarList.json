@@ -1,0 +1,50 @@
+[
+    {
+        "iconUrl": "/assets/svg/sidebar/dashboard.svg",
+        "title": "Dashboard"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/incidents.svg",
+        "title": "Incidents"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/network.svg",
+        "title": "Network"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/risk_m.svg",
+        "title": "Risk Management"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/policies.svg",
+        "title": "Policies"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/reports.svg",
+        "title": "Reports"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/quarantine.svg",
+        "title": "Quarantine"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/companies.svg",
+        "title": "Companies"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/accounts.svg",
+        "title": "Accounts"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/sandbox_a.svg",
+        "title": "Sandbox Analyzer"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/email_security.svg",
+        "title": "Email Security"
+    },
+    {
+        "iconUrl": "/assets/svg/sidebar/configuration.svg",
+        "title": "Configuration"
+    }
+]

@@ -1,5 +1,5 @@
 @import 'variables';
-
+@import 'scrollbar';
 
 @import 'sidebar';
 @import 'header';
@@ -9,5 +9,10 @@
 @import 'button';
 
 @import 'inputs/input';
-@import 'select2/core.scss';
+@import 'inputs/select';
+
 @import 'body';
+
+@import 'window';
+@import 'form';
+@import 'toast';
