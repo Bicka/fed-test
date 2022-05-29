@@ -68,6 +68,9 @@ export default class WindowModule{
     closeWindow(){
         $(`#window-open`).remove();
         BlockClick.hide();
+        this.activeType = null;
+        window.App.currentWindow = null;
+
     }
     getData(url)
     {

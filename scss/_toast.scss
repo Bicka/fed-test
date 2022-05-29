@@ -11,6 +11,12 @@
         width: 24px;
         height: 24px;
         float: left;
+        color: $white;
+        img{
+            height: 20px;
+            width: 20px;
+            filter: saturate(1) brightness(0) invert(1);;
+        }
     }
     .toast-content{
         width: 100%;
@@ -47,28 +53,12 @@
 }
 .toast-list{
     bottom: 10%;
-    right: 10%;
+    right: 5%;
     position: absolute;
     width: $toast-width;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 30;
 }
-@keyframes fadeInAnimation {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
-@keyframes fadeOutAnimation {
-    from {opacity: 1}
-    to {opacity: 0}
-  }
-  
-.fadeIn {
-    opacity: 0;
-    animation: fadeInAnimation 1s forwards;
-  }
-.fadeOut {
-    opacity: 1;
-    animation: fadeOutAnimation 1s forwards;
-  }

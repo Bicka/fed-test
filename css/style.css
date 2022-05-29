@@ -23,7 +23,7 @@
 ::-webkit-scrollbar-track {
   background: transparent;
   border: 0px none transparent;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-track:hover, ::-webkit-scrollbar-track:active {
   background: transparent;
@@ -136,20 +136,39 @@
   user-select: none;
   margin: auto;
 }
+#header .header-content .options-group .option-item.dot {
+  position: relative;
+}
 #header .header-content .options-group .option-item.dot::before {
   content: attr(data-before);
-  border: 1px solid #FF883F !important;
-  background-color: #FF883F !important;
   width: 16px;
   height: 16px;
   color: #fff;
   border-radius: 50%;
   position: absolute;
-  right: 17px;
   font-size: 9px;
+  border: 1px solid #fff;
+  background-color: #fff;
   justify-content: center;
   align-items: center;
   display: flex;
+  right: -3px;
+}
+#header .header-content .options-group .option-item.dot-warning::before {
+  border: 1px solid #FF883F !important;
+  background-color: #FF883F !important;
+}
+#header .header-content .options-group .option-item.dot-success::before {
+  border: 1px solid #268E6C !important;
+  background-color: #268E6C !important;
+}
+#header .header-content .options-group .option-item.dot-info::before {
+  border: 1px solid #5ac7fa !important;
+  background-color: #5ac7fa !important;
+}
+#header .header-content .options-group .option-item.dot-danger::before {
+  border: 1px solid #ff3a30 !important;
+  background-color: #ff3a30 !important;
 }
 
 #content {
@@ -352,6 +371,62 @@ select:disabled {
   background-color: #fff;
 }
 
+.select-wrapper {
+  width: 283px;
+}
+.select-wrapper .select-btn, .select-wrapper li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-wrapper .select-btn {
+  height: 36px !important;
+  width: 283px;
+  font-size: 13px;
+  background: #fff;
+  justify-content: space-between;
+}
+.select-wrapper .select-btn img {
+  position: relative;
+  right: 30px;
+  transition: transform 0.3s linear;
+}
+.select-wrapper .content {
+  z-index: 30;
+  position: absolute;
+  display: none;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  max-height: 283px;
+  min-width: 264px;
+  width: 264px;
+  border: 2px solid;
+  border-color: #065cc1;
+}
+.select-wrapper .content .options-select {
+  margin: 0;
+  padding: 0px;
+  margin-top: 10px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+.select-wrapper .content .options-select li {
+  height: 30px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+.select-wrapper .content .options-select li:hover, .select-wrapper .content .options-select li.selected {
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+.select-wrapper.active .select-btn img {
+  transform: rotate(-180deg);
+}
+.select-wrapper.active .content {
+  display: block;
+}
+
 body {
   margin: 0px !important;
   font-family: "Montserrat", sans-serif;
@@ -380,6 +455,32 @@ body .block-clicks {
   grid-template-rows: 56px calc(100vh - 56px);
   min-width: calc(100vw - 90px);
   min-height: 100vh;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 1s forwards;
+}
+
+.fadeOut {
+  opacity: 1;
+  animation: fadeOutAnimation 1s forwards;
 }
 
 .window-div {
@@ -530,6 +631,12 @@ body .block-clicks {
   width: 24px;
   height: 24px;
   float: left;
+  color: #fff;
+}
+.toast-div .toast-icon img {
+  height: 20px;
+  width: 20px;
+  filter: saturate(1) brightness(0) invert(1);
 }
 .toast-div .toast-content {
   width: 100%;
@@ -565,39 +672,14 @@ body .block-clicks {
 
 .toast-list {
   bottom: 10%;
-  right: 10%;
+  right: 5%;
   position: absolute;
   width: 340px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-@keyframes fadeInAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeOutAnimation {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.fadeIn {
-  opacity: 0;
-  animation: fadeInAnimation 1s forwards;
-}
-
-.fadeOut {
-  opacity: 1;
-  animation: fadeOutAnimation 1s forwards;
+  z-index: 30;
 }
 
 /*# sourceMappingURL=style.css.map */

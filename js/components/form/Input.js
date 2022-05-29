@@ -1,3 +1,5 @@
+import SelectCustom from "./SelectCustom";
+
 export default class Input{
     constructor(data)
     {
@@ -8,6 +10,7 @@ export default class Input{
         this.isRequired = data.isRequired;
         data.isDisabled ? this.isDisabled = data.isDisabled : this.isDisabled = false;
         data.isParent ? this.isParent = data.isParent : this.isParent = false;
+        
         if(data.isChild)
         {
             this.isChild = data.isChild;
@@ -75,6 +78,8 @@ export default class Input{
     }
     #selectType()
     {
+        //this.selectObj = new SelectCustom(this);
+        //return this.selectObj.init()
         return `<select 
         id="${this.elementId}"
         name="${this.elementId}"
@@ -117,10 +122,26 @@ export default class Input{
         {   let elementId = this.elementId;
             $(`input[name=${elementId}]`).on('change',function(){
                 let value = $( `input[name=${elementId}]:checked`).val();
-                document.querySelectorAll(`[data-parent="${elementId}"]`).forEach(item=>{item.classList.add("hide-row")})
-                document.querySelectorAll(`[data-parent="${elementId}"][data-parent-value="${value}"]`).forEach(item=>{item.classList.remove("hide-row")})
+                document.querySelectorAll(`[data-parent="${elementId}"]`)
+                .forEach(item=>{
+                    //item.classList.add("fadeOut");
+                    item.classList.add("hide-row")
+                })
+                document.querySelectorAll(`[data-parent="${elementId}"][data-parent-value="${value}"]`)
+                .forEach(item=>{
+                    //item.classList.remove("fadeOut");
+                    item.classList.remove("hide-row");
+                    //item.classList.add("fadeIn")
+                })
             });
             $(`input[name=${elementId}]`).trigger('change');
         }
+    }
+    initTriggers(){
+        if(this.type == "select")
+        {
+            this.selectObj.initTriggers();
+        }
+        this.initTriggerForChildren();
     }
 }

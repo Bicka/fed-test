@@ -3,13 +3,13 @@ export default class Toast{
     static #getToastBody(data){
         return `<div class="fadeIn toast-div ${data.type}" id="toast-${data.index}">
             <div class="toast-icon">
-                <img src="assets/svg/icons/check.svg">
+                <img src=${data.icon? `"${data.icon}"`: "assets/svg/icons/check.svg"} />
             </div>
             <div class="toast-content">
                 <span>${data.text}</span>
             </div>
             <div class="toast-close">
-                <img src="assets/svg/icons/close.svg">
+                <img src="assets/svg/icons/close.svg"/>
             </div>
         </div>`;
     }

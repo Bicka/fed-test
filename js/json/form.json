@@ -1,4 +1,5 @@
 {
+   "closeWindow": false,
    "title":"Create Report",
    "chapters":[
       {
@@ -11,7 +12,11 @@
                "placeHolder":"Executive Summary",
                "isRequired":false,
                "options":[
-                  
+                  {
+                     "name":"Executive Summary",
+                     "value":0,
+                     "checked":true
+                  }
                ]
             },
             {
@@ -21,7 +26,11 @@
                "placeHolder":"Company Name",
                "isRequired":false,
                "options":[
-                  
+                  {
+                     "name":"Company Name",
+                     "value":0,
+                     "checked":true
+                  }
                ]
             },
             {
@@ -99,7 +108,7 @@
                "id":"selct-time",
                "labelName":"Reporting interval",
                "type":"select",
-               "placeHolder":"PlaceHolder",
+               "placeHolder":"Last 7 days",
                "isRequired":false,
                "options":[
                   {

@@ -75,6 +75,7 @@ const formChapte2 ={
     ]
 }
 export const formData={
+    closeWindow: false,
     title: "Create Report",
     chapters: [formChapte1,formChapte2]
 };

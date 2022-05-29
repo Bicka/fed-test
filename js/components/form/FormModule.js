@@ -29,12 +29,19 @@ export default class FormModule{
     }
     initTriggers(){
         this.chapters.forEach(item=>item.initTriggers());
-        let close = this.closeWindow;
         $(`#window-form-save`).on('click',()=>{
-            Toast.show({type: "success", text:"Successfully saved the report"});
-            close();
-        })
+            $(`#window-from`).trigger("submit");
+        });
+        $(`#window-from`).on('submit',(e)=>{
+            e.preventDefault();
+            this.#formSubmit();
+        });
     }
+    #formSubmit(){
+        Toast.show({type: "success", text:"Successfully saved the report"});
+        if(this.options.closeWindow) this.closeWindow();
+    }
+
     
 
 }

@@ -28,12 +28,13 @@ export default class SidebarItem{
     clickAction()
     {
         let title = this.title;
+        let icon = this.iconUrl;
         $(`.sidebar-list #sidebar-item-${this.index}`)
             .on('click', 
                 ()=>{
                     let text = `${title} has been pressed!`;
                     console.log(text);
-                    Toast.show({type: "info", text: text, time: 100000});
+                    Toast.show({type: "info", text: text, time: 1000, icon: icon});
                 })
     }
 }

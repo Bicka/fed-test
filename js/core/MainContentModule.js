@@ -22,4 +22,8 @@ export default class MainContentModule
         </div>`
 
     }
+    initTriggers()
+    {
+        this.options.header.initTriggers()
+    }
 }

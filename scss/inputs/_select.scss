@@ -21,3 +21,65 @@ select{
     }
     
 }
+.select-wrapper{
+    width: 283px;
+    .select-btn, li{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .select-btn{
+      height: $input-select-height;
+      width: 283px;
+      font-size: 13px;
+      background: $white;
+      justify-content: space-between;
+  
+      img{
+        position: relative;
+        right: 30px;
+        transition: transform 0.3s linear;
+      }
+    }
+    
+    .content{
+      z-index: 30;
+      position: absolute;
+      display: none;
+      margin-top: 15px;
+      background: #fff;
+      border-radius: 7px;
+      //box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-height: 283px;
+      min-width: 264px;
+      width: 264px;
+      border: 2px solid;
+      border-color: $primary-color-focus;
+      
+      .options-select{
+        margin: 0;
+        padding: 0px;
+        margin-top: 10px;
+        max-height: 100px;
+        overflow-y: auto;
+        //padding-right: 7px;
+        li{
+          height: 30px;
+          padding: 0 10px;
+          font-size: 13px;
+          &:hover,&.selected{
+            border-radius: 5px;
+            background: #f2f2f2;
+          }
+        }
+      }
+    }
+    &.active {
+      .select-btn img{
+        transform: rotate(-180deg);
+      }
+      .content{
+        display: block;
+      }
+    }
+}

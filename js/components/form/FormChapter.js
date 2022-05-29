@@ -18,6 +18,6 @@ export default class FormChapter{
         </div>`
     }
     initTriggers(){
-        this.items.forEach((item)=>{item.initTriggerForChildren()});
+        this.items.forEach((item)=>{item.initTriggers();});
     }
 }

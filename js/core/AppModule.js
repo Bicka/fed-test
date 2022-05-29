@@ -27,6 +27,7 @@ export default class AppModule{
         document.getElementById(this.options.elementId).innerHTML =
             `${this.options.sidebar.init()} 
             ${this.options.mainContent.init()}`;
+        this.options.mainContent.initTriggers();
     }
     createNewWindow(type,formData)
     {
