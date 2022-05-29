@@ -1,6 +1,8 @@
+/**
+ * Clasa pentru initializarea modulului de header
+ */
 export default class HeaderInit{
     /**
-     * 
      * @param {string} username 
      * @param {number} notifCount 
      */

@@ -22,7 +22,6 @@ export default class AppModule{
 
     #init()
     {
-        console.log(this.options)
         document.getElementById(this.options.elementId).className = 'app-div';
         document.getElementById(this.options.elementId).innerHTML =
             `${this.options.sidebar.init()} 

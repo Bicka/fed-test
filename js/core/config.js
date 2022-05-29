@@ -67,7 +67,7 @@ const formChapte2 ={
             {isChild:true, parentId: "radio-time",parentValue: 1,id:"selct-reccurence",labelName: "Recurrence", type: "select", placeHolder: "Weekly", isRequired: false,
             options:[{name:"Weekly", value: 0,checked: true}]},
             {isChild:true, parentId: "radio-time",parentValue: 1,id:"selct-on",labelName: "On", type: "select", placeHolder: "Monday", isRequired: false,
-            options:[{name:"Monday", value: 0,checked: true},{name:"Tuesday", value: 1,checked: true}]},
+            options:[{name:"Monday", value: 0,checked: false},{name:"Tuesday", value: 1,checked: true}]},
         {id:"selct-time",labelName: "Reporting interval", type: "select", placeHolder: "Placeholder", isRequired: false,
             options:[{name:"Last 7 days", value: 0,checked: true}]},
         {id:"checkbox-export",labelName: "Attach files", type: "checkbox", placeHolder: "Placeholder", isRequired: false,

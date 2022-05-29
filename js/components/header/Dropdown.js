@@ -1,4 +1,7 @@
 import Toast from "../Toast";
+/**
+ * Modulul de dropdown pentru utilizator
+ */
 export default class Dropdown{
 
     constructor(data)
@@ -6,6 +9,10 @@ export default class Dropdown{
         this.options = data;
         
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru dropdown
+     */
     init(){
         return `<div class="user-options dropdown">
                     <span class="dropbtn">
@@ -17,6 +24,9 @@ export default class Dropdown{
 
       
     }
+     /**
+     * Initializeaza trigarurile elementelor HTML afisate la initializare
+     */
     initTriggers()
     {
         $(`.dropdown #user-dropdown-trigger`)

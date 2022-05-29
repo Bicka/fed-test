@@ -1,3 +1,6 @@
+/**
+ * Clasa pentru initializarea modulului de sidebar
+ */
 export default class SidebarInit{
     /**
      * 

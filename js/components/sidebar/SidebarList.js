@@ -1,6 +1,8 @@
 import { sidebarData } from '../../core/config';
 import SidebarItem from './SidebarItem'
-
+/**
+ * Modulul de sidebar
+ */
 export default class SidebarList{
     /**
      * 
@@ -13,7 +15,11 @@ export default class SidebarList{
        
     }
     
-
+    /**
+     * 
+     * @returns Returneza codul HTML pentru un sidebar;
+     * Daca primeste eroare la aducerea datelor din json va folosi variabila din fisiersul config.js
+     */
     init()
     {
         $.when(this.getData()).done(() => {
@@ -36,7 +42,10 @@ export default class SidebarList{
         return '';
         
     }
-
+    /**
+     * 
+     * @returns Aducerea datelor pentru sidebar
+     */
     getData()
     {
         return $.ajax({

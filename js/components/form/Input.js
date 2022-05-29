@@ -1,5 +1,7 @@
 import SelectCustom from "./SelectCustom";
-
+/**
+ * Clasa pentru generarea inputurilor pentru formular
+ */
 export default class Input{
     constructor(data)
     {
@@ -19,6 +21,10 @@ export default class Input{
         }
         this.options = data.options;
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru randul care contine tipul de input initializat
+     */
     init(){
         if(this.labelName.length > 0 && !this.isChild)
         {
@@ -45,6 +51,10 @@ export default class Input{
 
         }
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru tipul de Input initializat
+     */
     initType()
     {
         switch(this.type)
@@ -76,22 +86,19 @@ export default class Input{
                 />`;
         }
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru inputul de tip SELECT
+     */
     #selectType()
     {
-        //this.selectObj = new SelectCustom(this);
-        //return this.selectObj.init()
-        return `<select 
-        id="${this.elementId}"
-        name="${this.elementId}"
-        ${this.isRequired? 'required': ""}
-        ${this.isDisabled? 'disabled': ""}
-        >
-        <option value="" disabled selected hidden>${this.placeHolder}</option>
-            ${this.options.map((item)=>{
-                return `<option value='${item.value}'>${item.name}</option>`
-            }).join('')}
-        </select>`
+        this.selectObj = new SelectCustom(this);
+        return this.selectObj.init()
     }
+     /**
+     * 
+     * @returns Returneza codul HTML pentru inputul de tip CHECKBOX
+     */
     #checkBoxType()
     {
         return `<div>${this.options.map((item)=>{
@@ -104,6 +111,10 @@ export default class Input{
                 <label for="${this.elementId}-${item.value}">${item.name}</label></div>`
         }).join('')}</div>`;
     }
+     /**
+     * 
+     * @returns Returneza codul HTML pentru inputul de tip RADIO
+     */
     #radioType()
     {
         return `<div>${this.options.map((item)=>{
@@ -116,32 +127,35 @@ export default class Input{
                     <label for="${this.elementId}-${item.value}">${item.name}</label></div>`
         }).join('')}</div>`;
     }
-
-    initTriggerForChildren(){
+    /**
+     * Initializeaza trigare pentru randurile care sunt Parent.
+     * Ex: Pentru inputul de tip radio va permite afisarea randurilor Child in functie de valoarea selectata
+     */
+    #initTriggerForChildren(){
         if(this.isParent)
         {   let elementId = this.elementId;
             $(`input[name=${elementId}]`).on('change',function(){
                 let value = $( `input[name=${elementId}]:checked`).val();
                 document.querySelectorAll(`[data-parent="${elementId}"]`)
                 .forEach(item=>{
-                    //item.classList.add("fadeOut");
                     item.classList.add("hide-row")
                 })
                 document.querySelectorAll(`[data-parent="${elementId}"][data-parent-value="${value}"]`)
                 .forEach(item=>{
-                    //item.classList.remove("fadeOut");
                     item.classList.remove("hide-row");
-                    //item.classList.add("fadeIn")
                 })
             });
             $(`input[name=${elementId}]`).trigger('change');
         }
     }
+     /**
+     * Initializeaza trigarurile elementelor HTML afisate la initializare
+     */
     initTriggers(){
         if(this.type == "select")
         {
             this.selectObj.initTriggers();
         }
-        this.initTriggerForChildren();
+        this.#initTriggerForChildren();
     }
 }

@@ -1,9 +1,16 @@
 import Toast from "../Toast";
+/**
+ * Modulul de optiuni din partea dreapta a utilizatorului
+ */
 export default class OptionsGroup{
     constructor(data)
     {
         this.options = data;
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru optiuni
+     */
     init(){
         let count = -1;
         return `<div class="options-group">
@@ -16,6 +23,9 @@ export default class OptionsGroup{
                     }).join('')}
                 </div>`
     }
+    /**
+     * Initializeaza trigarurile elementelor HTML afisate la initializare
+     */
     initTriggers()
     {
         let count = 0;

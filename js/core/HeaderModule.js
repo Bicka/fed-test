@@ -1,6 +1,7 @@
 import HeaderInit from '../class/HeaderInit.js'
 import Dropdown from '../components/header/Dropdown.js';
 import OptionsGroup from '../components/header/OptionsGroup.js';
+
 export default class HeaderModule
 {
     /**

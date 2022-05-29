@@ -1,4 +1,5 @@
 import ContentInit from '../class/ContentInit.js'
+
 export default class ContentModule
 {
     /**

@@ -22,7 +22,7 @@
     .sidebar-list{
         display:list-item;
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
         margin-top: 54px;
         .sidebar-item{
             width: $sidebar-width;

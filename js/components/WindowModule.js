@@ -1,7 +1,16 @@
 import BlockClick from "./BlockClick";
 import FormModule from "./form/FormModule";
 import {formData} from "../core/config"
+/**
+ * Modulul pentru generarea ferestrei
+ */
 export default class WindowModule{
+    /**
+     * 
+     * @param {string} type - form (poate fi extisa)
+     * @param {string} url - pentru aducerea datelor
+     * Daca intampina eroare la aducerea datelor va folosi variabila din fisierul de config.js
+     */
     constructor(type, url)
     {
         this.type = type;
@@ -30,6 +39,9 @@ export default class WindowModule{
         })
         
     }
+    /**
+     * Initializarea si afisarea ferestrei
+     */
     #init()
     {
         let newWindow = 
@@ -53,11 +65,16 @@ export default class WindowModule{
         this.#initOptionButtons();
         this.#initActiveType();
     }
-
+    /**
+     * Initializarea actionilor pentru inchiderea ferestrei
+     */
     #initOptionButtons(){
         $(`#window-close-btn`).on('click',()=>this.closeWindow());
         $(`#window-close-btn-footer`).on('click',()=>this.closeWindow())
     }
+    /**
+     * Initializarea modulului din interiorul ferestrei
+     */
     #initActiveType(){
         if(this.activeType)
         { 
@@ -65,6 +82,9 @@ export default class WindowModule{
             this.activeType.initTriggers();
         }
     }
+    /**
+     * Inchiderea ferestrei
+     */
     closeWindow(){
         $(`#window-open`).remove();
         BlockClick.hide();
@@ -72,6 +92,11 @@ export default class WindowModule{
         window.App.currentWindow = null;
 
     }
+    /**
+     * 
+     * @param {string} url 
+     * @returns Promise cu datele pentru generarea continutului
+     */
     getData(url)
     {
         return $.ajax({

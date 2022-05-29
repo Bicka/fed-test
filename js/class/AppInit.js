@@ -1,7 +1,9 @@
 
 import MainContentModule from "../core/MainContentModule";
 import SidebarModule from "../core/SidebarModule";
-
+/**
+ * Clasa pentru initializarea aplicatiei
+ */
 export default class AppInit{
     /**
     * 

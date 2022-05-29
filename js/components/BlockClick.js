@@ -1,3 +1,6 @@
+/**
+ * Modulul de mascare al paginii
+ */
 export default class BlockClick{
     static isActive = false;
     static show()

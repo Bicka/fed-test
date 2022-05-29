@@ -55,7 +55,7 @@
 #sidebar .sidebar-list {
   display: list-item;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 54px;
 }
 #sidebar .sidebar-list .sidebar-item {
@@ -386,28 +386,36 @@ select:disabled {
   background: #fff;
   justify-content: space-between;
 }
-.select-wrapper .select-btn img {
+.select-wrapper .select-btn img.arrow {
   position: relative;
   right: 30px;
   transition: transform 0.3s linear;
+}
+.select-wrapper .select-btn img.delete {
+  display: none;
+  position: relative;
+  right: 70px;
+  transition: transform 0.3s linear;
+  width: 12px;
+  height: 12px;
+  filter: brightness(1) invert(0.5);
 }
 .select-wrapper .content {
   z-index: 30;
   position: absolute;
   display: none;
-  margin-top: 15px;
+  margin-top: 5px;
   background: #fff;
-  border-radius: 7px;
+  border-radius: 5px;
   max-height: 283px;
   min-width: 264px;
   width: 264px;
   border: 2px solid;
-  border-color: #065cc1;
+  border-color: #6abcf8;
 }
 .select-wrapper .content .options-select {
   margin: 0;
   padding: 0px;
-  margin-top: 10px;
   max-height: 100px;
   overflow-y: auto;
 }
@@ -416,12 +424,14 @@ select:disabled {
   padding: 0 10px;
   font-size: 13px;
 }
-.select-wrapper .content .options-select li:hover, .select-wrapper .content .options-select li.selected {
-  border-radius: 5px;
+.select-wrapper .content .options-select li:hover {
   background: #f2f2f2;
 }
-.select-wrapper.active .select-btn img {
-  transform: rotate(-180deg);
+.select-wrapper .content .options-select li.selected {
+  background: #e4e4e4;
+}
+.select-wrapper.active .select-btn img.delete {
+  display: inline;
 }
 .select-wrapper.active .content {
   display: block;

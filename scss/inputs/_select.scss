@@ -35,10 +35,19 @@ select{
       background: $white;
       justify-content: space-between;
   
-      img{
+      img.arrow{
         position: relative;
         right: 30px;
         transition: transform 0.3s linear;
+      }
+      img.delete{
+        display: none;
+        position: relative;
+        right: 70px;
+        transition: transform 0.3s linear;
+        width: 12px;
+        height: 12px;
+        filter: brightness(1) invert(0.5);
       }
     }
     
@@ -46,20 +55,19 @@ select{
       z-index: 30;
       position: absolute;
       display: none;
-      margin-top: 15px;
+      margin-top: 5px;
       background: #fff;
-      border-radius: 7px;
+      border-radius: 5px;
       //box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       max-height: 283px;
       min-width: 264px;
       width: 264px;
       border: 2px solid;
-      border-color: $primary-color-focus;
+      border-color: $primary-color-active;
       
       .options-select{
         margin: 0;
         padding: 0px;
-        margin-top: 10px;
         max-height: 100px;
         overflow-y: auto;
         //padding-right: 7px;
@@ -67,16 +75,20 @@ select{
           height: 30px;
           padding: 0 10px;
           font-size: 13px;
-          &:hover,&.selected{
-            border-radius: 5px;
+          &:hover{
             background: #f2f2f2;
+          }
+          
+          &.selected{
+            
+            background: #e4e4e4;
           }
         }
       }
     }
     &.active {
-      .select-btn img{
-        transform: rotate(-180deg);
+      .select-btn img.delete{
+        display: inline;
       }
       .content{
         display: block;

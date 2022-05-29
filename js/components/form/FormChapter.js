@@ -1,11 +1,17 @@
 import Input from "./Input";
-
+/**
+ * Clasa pentru initializarea capitolelor pentru formulare
+ */
 export default class FormChapter{
     constructor(index,data){
         this.index = index;
         this.title = data.title;
         this.items = data.inputs;
     }
+    /**
+     * 
+     * @returns Retunreaza codul HTML al capitolului
+     */
     init()
     {
         this.items = this.items.map((item)=> { return new Input(item)});
@@ -17,6 +23,9 @@ export default class FormChapter{
             ${rows}
         </div>`
     }
+    /**
+     * Initializeaza trigarurile elementelor HTML afisate la initializare
+     */
     initTriggers(){
         this.items.forEach((item)=>{item.initTriggers();});
     }

@@ -1,5 +1,12 @@
+/**
+ * Modulul de afisarea notificarilor de tip Toast
+ */
 export default class Toast{
-
+    /**
+     * 
+     * @param {Object} data 
+     * @returns Codul HTML al notificarii
+     */
     static #getToastBody(data){
         return `<div class="fadeIn toast-div ${data.type}" id="toast-${data.index}">
             <div class="toast-icon">
@@ -13,6 +20,13 @@ export default class Toast{
             </div>
         </div>`;
     }
+    /**
+     * Afisare notificarilor
+     * type: success/warning/info/error
+     * text: mesajul pentru afisare
+     * Optional: time, icon(url);
+     * @param {Object} data 
+     */
     static show(data){
         data.index = Math.floor(Math.random() * 10000);
         let time = data.time ? data.time : 3000;
@@ -32,6 +46,10 @@ export default class Toast{
         $(`#toast-${data.index} .toast-close`).on("click",()=>{Toast.close(`toast-${data.index}`)})
         setTimeout(()=>{Toast.close(`toast-${data.index}`)},time);
     }
+    /**
+     * Inchiderea notificarilor
+     * @param {string} elementId 
+     */
     static close(elementId)
     {   
         $(`#${elementId}`).removeClass('fadeIn').fadeOut(1000, ()=>{$(`#${elementId}`).remove()});

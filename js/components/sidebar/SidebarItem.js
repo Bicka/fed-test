@@ -1,5 +1,7 @@
 import Toast from "../Toast";
-
+/**
+ * Clasa pentru item-urile din sidebar
+ */
 export default class SidebarItem{
     /**
      * 
@@ -15,6 +17,10 @@ export default class SidebarItem{
         this.iconUrl = iconUrl;
         this.title = title;
     }
+    /**
+     * 
+     * @returns Returneza codul HTML pentru un item
+     */
     init()
     {
         return `<div class="sidebar-item" id="sidebar-item-${this.index}">
@@ -24,7 +30,10 @@ export default class SidebarItem{
                         </div>
                     </div>`
     }
-
+    /**
+     * 
+     * initializarea evenimentului de click pe item
+     */
     clickAction()
     {
         let title = this.title;
